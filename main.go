@@ -2,10 +2,13 @@ package main
 
 import (
 	"fmt"
-	"gowallval/services/steem_validator"
+	"gowallval/utils/base58"
+
+	iota_validator "gowallval/services/iota_validator"
 )
 
 func main() {
-	m := steem_validator.IsValidAddress("ebookwriter")
+	base58.Init()
+	m := iota_validator.IsValidAddress("OGMMQJUDMNNYSOAXMJWAMNAJPHWMGVAY9UWBXRGTXXVEDIEWSNYRNDQY99NDJQB9QQBPCRRNFAIUPGPLZ")
 	fmt.Println(m)
 }

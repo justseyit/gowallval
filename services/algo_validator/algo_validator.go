@@ -1,5 +1,3 @@
-//NOT COMPLETED
-
 package algo_validator
 
 import (
@@ -7,23 +5,29 @@ import (
 	"crypto/sha512"
 	"encoding/base32"
 	"fmt"
-	"strconv"
-	"strings"
+
+	goalgo "github.com/algorand/go-algorand-sdk/types"
 )
 
 const algorand_checksum_byte_length = 4
 const algorand_address_length = 58
+const public_key_length = 32
 
 func IsValidAddress(address string) bool {
-	return verifyChecksum(address)
+	_, err := goalgo.DecodeAddress(address)
+	if err != nil {
+		fmt.Println(err)
+		return false
+	}
+	return true
+	//return verifyChecksum(address)
 }
 
-func correctPadding(address string) string {
+/*func correctPadding(address string) string {
 	if len(address)%8 == 0 {
 		println("len address: ", len(address))
 		return strconv.Itoa(len(address))
 	}
-	println("address + (8 - len(address)%8): ", address+strings.Repeat("=", 8-len(address)%8))
 	return address + strings.Repeat("=", 8-len(address)%8)
 }
 
@@ -31,38 +35,56 @@ func verifyChecksum(address string) bool {
 	if len(address) != algorand_address_length {
 		return false
 	}
-	//Decode base32 address
-	//dcd, _ := base32.StdEncoding.DecodeString(correctPadding(address))
-	decoded := bytes.NewBuffer([]byte(decode(correctPadding(address))))
-	println("decoded: ", decoded)
-	//println("decoded.Bytes(): ", decoded.Bytes())
 
-	//Assign addr with the 0 to decoded.length - 4 of variable decoded
-	addr := decoded.Bytes()[:len(decoded.Bytes())-algorand_checksum_byte_length]
+	// Decode base32 Address
+	parsed := base32parse(correctPadding(address))
+	println("parsed: ", parsed)
+
+	decoded := bytes.NewBuffer(parsed)
+	println("decoded: ", decoded)
+
+	addr := bytes.NewBuffer(decoded.Bytes()[:len(decoded.Bytes())-algorand_checksum_byte_length])
 	println("addr: ", addr)
 
-	//Assign checksum with the last 4 of variable decoded
-	checksum := decoded.Bytes()[len(decoded.Bytes())-algorand_checksum_byte_length:]
+	// Calculate Checksum
+	checksum := bytes.NewBuffer(decoded.Bytes()[len(decoded.Bytes())-algorand_checksum_byte_length:])
 	println("checksum: ", checksum)
 
 	//Convert checksum to hex
+	checksumHex := byteToHex(checksum.Bytes())
+
+	//Hash Address and Checksum
+	hash := sha512.Sum512(addr.Bytes())
+	println("hash: ", hash)
+
+	code := byteToHex(hash[:])
+	code = code[:len(code)-8]
+	println("code: ", code)
+	println("checksumHex: ", checksumHex)
+
+	//hash := sha512.Sum512(append(addr.Bytes(), base32parse(checksumHex)...))
+
+	/*decoded := bytes.NewBuffer(base32parse(correctPadding(address)))
+	println("decoded: ", decoded)
+
+	addr := decoded.Bytes()[:len(decoded.Bytes())-algorand_checksum_byte_length]
+	println("addr: ", addr)
+
+	checksum := decoded.Bytes()[len(decoded.Bytes())-algorand_checksum_byte_length:]
+	println("checksum: ", checksum)
+
 	checksumHex := byteToHex(checksum)
-	//println(checksumHex)
 
 	hash := sha512.New()
 	hash.Write(addr)
 
-	//Convert hash to hex
-
 	code := byteToHex(hash.Sum(nil))
-	//Get last 8 characters of code
 	code = code[len(code)-8:]
 	println("code: ", code)
-	println("checksumHex: ", checksumHex)
+	println("checksumHex: ", checksumHex)*/ /*
 	return code == checksumHex
 }
 
-// convert byte array to hex string
 func byteToHex(data []byte) string {
 	return fmt.Sprintf("%x", data)
 }
@@ -71,9 +93,30 @@ func println(vname string, s interface{}) {
 	fmt.Println(vname, s)
 }
 
-// Decode string as base32
-func decode(s string) string {
-	dcd, _ := base32.StdEncoding.DecodeString(correctPadding(s))
-	println("dcd: ", dcd)
-	return string(dcd)
+func base32parse(s string) []uint8 {
+	dst := make([]uint8, 0)
+	base32.StdEncoding.Encode(dst, []byte(s))
+	return dst
+}*/
+
+func decodeAddress(address string) ([]uint8, error) {
+
+	addressBytes, _ := base32.StdEncoding.DecodeString(address)
+
+	if len(addressBytes) != public_key_length+algorand_checksum_byte_length-1 {
+		return nil, fmt.Errorf("Invalid address length: %d. Must be: %d", len(addressBytes), public_key_length+algorand_checksum_byte_length)
+	}
+
+	publicKey := addressBytes[:public_key_length]
+	checksum := addressBytes[public_key_length : public_key_length+algorand_checksum_byte_length]
+
+	// Compute the expected checksum
+	computedChecksum := sha512.Sum512_256(publicKey)
+
+	//Check if computed checksum equals the checksum as list
+	if !bytes.Equal(computedChecksum[:algorand_checksum_byte_length], checksum) {
+		return nil, fmt.Errorf("Invalid checksum, bytes are not equal")
+	}
+
+	return publicKey, nil
 }

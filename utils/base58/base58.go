@@ -6,7 +6,7 @@ const ALPHABET string = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvw
 
 var ALPHABET_MAP map[string]int = make(map[string]int)
 
-func init() {
+func Init() {
 	for i, c := range ALPHABET {
 		ALPHABET_MAP[string(c)] = i
 	}
