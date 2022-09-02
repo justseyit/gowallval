@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"gowallval/utils/base58"
 
-	iota_validator "gowallval/services/iota_validator"
+	xtz_validator "gowallval/services/xtz_validator"
 )
 
 func main() {
 	base58.Init()
-	m := iota_validator.IsValidAddress("OGMMQJUDMNNYSOAXMJWAMNAJPHWMGVAY9UWBXRGTXXVEDIEWSNYRNDQY99NDJQB9QQBPCRRNFAIUPGPLZ")
+	m := xtz_validator.IsValidAddress("tz1b5xhEHFGkaN3fc6Aw8KsGxxxxQ5XUftps")
 	fmt.Println(m)
 }

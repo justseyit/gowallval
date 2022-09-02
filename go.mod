@@ -5,11 +5,14 @@ go 1.19
 require (
 	github.com/btcsuite/btcutil v1.0.2
 	github.com/ethereum/go-ethereum v1.10.23
+	github.com/stellar/go v0.0.0-20220902155330-ae7c2c09efe5
 )
 
 require (
 	filippo.io/edwards25519 v1.0.0-rc.1 // indirect
 	github.com/aead/siphash v1.0.1 // indirect
+	github.com/arloliu/jsonpack v1.0.3 // indirect
+	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d // indirect
 	github.com/btcsuite/btcd/btcec/v2 v2.2.0 // indirect
 	github.com/btcsuite/btcd/btcutil v1.1.0 // indirect
 	github.com/btcsuite/btcd/chaincfg/chainhash v1.0.1 // indirect
@@ -23,6 +26,7 @@ require (
 	github.com/decred/dcrd/lru v1.0.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
+	github.com/hailongz/golang v0.0.0-20200511034424-0e6b51b1b18b // indirect
 	github.com/iotaledger/hive.go v0.0.0-20211011085923-fd2eb0a47bf8 // indirect
 	github.com/iotaledger/iota.go v1.0.0 // indirect
 	github.com/iotaledger/iota.go/v2 v2.0.1 // indirect
@@ -30,10 +34,11 @@ require (
 	github.com/jrick/logrotate v1.0.0 // indirect
 	github.com/kkdai/bstream v0.0.0-20161212061736-f391b8402d23 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
+	github.com/snksoft/crc v1.1.0 // indirect
 	github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7 // indirect
 	golang.org/x/net v0.0.0-20220607020251-c690dde0001d // indirect
 	golang.org/x/text v0.3.7 // indirect
-	google.golang.org/genproto v0.0.0-20200526211855-cb27e3aa2013 // indirect
+	google.golang.org/genproto v0.0.0-20210624195500-8bfb893ecb84 // indirect
 	google.golang.org/grpc v1.40.0 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
 )
@@ -45,6 +50,6 @@ require (
 	github.com/fivebinaries/go-cardano-serialization v0.0.0-20220811194245-792afc7665a3
 	github.com/fxamacker/cbor/v2 v2.4.0 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
-	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa // indirect
+	golang.org/x/crypto v0.0.0-20220829220503-c86fa9a7ed90 // indirect
 	golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a // indirect
 )

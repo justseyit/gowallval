@@ -1,4 +1,5 @@
 //NOT COMPLETED
+//Gives false negatives
 
 package iota_validator
 
