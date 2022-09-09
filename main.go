@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"gowallval/utils/base58"
 
-	xtz_validator "gowallval/services/xtz_validator"
+	ripple_validator "gowallval/services/ripple_validator"
 )
 
 func main() {
 	base58.Init()
-	m := xtz_validator.IsValidAddress("tz1b5xhEHFGkaN3fc6Aw8KsGxxxxQ5XUftps")
+	m := ripple_validator.IsValidAddress("rpSpKdgBL4ecPx1b6bE43dRybbSv1TRADe")
 	fmt.Println(m)
 }
