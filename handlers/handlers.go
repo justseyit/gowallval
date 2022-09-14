@@ -3,13 +3,15 @@ package handlers
 import (
 	"encoding/json"
 	"net/http"
-	"gowallval/models"
+
+	"github.com/seyitahmetgkc/gowallval/models"
 
 	"github.com/gorilla/mux"
 )
 
 func AddressValidationHandler(w http.ResponseWriter, r *http.Request) {
-	vars := mux.Vars(r)
+
+    vars := mux.Vars(r)
 	currencySymbol := vars["currencySymbol"]
 	networkSymbol := vars["networkSymbol"]
 	address := vars["address"]
@@ -29,11 +31,16 @@ func AddressValidationHandler(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte(err.Error()))
 		response.Message = err.Error()
 		response.IsValidAddress = false
-	}else{
+	} else {
 		response.IsValidAddress = response.Currency.Network.Validator(address)
 		response.Message = "Address validation completed."
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(response)
+	w.WriteHeader(http.StatusOK)
+
+	data, _ := json.Marshal(response)
+
+	w.Write([]byte(data))
+	//json.NewEncoder(w).Encode(response)
 }

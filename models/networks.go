@@ -1,29 +1,28 @@
 package models
 
 import (
-	//. "gowallval/models"
-	AeternityValidator "gowallval/validators/ae_validator"
-	AlgorandValidator "gowallval/validators/algo_validator"
-	ArdorValidator "gowallval/validators/ardr_validator"
-	AtomValidator "gowallval/validators/atom_validator"
-	EthereumValidator "gowallval/validators/ethereum_validator"
-	BitcoinValidator "gowallval/validators/bitcoin_validator"
-	BEP2Validator "gowallval/validators/bnb_validator"
-	BTSValidator "gowallval/validators/bts_validator"
-	CardanoValidator "gowallval/validators/cardano_validator"
-	EOSValidator "gowallval/validators/eos_validator"
-	HBARValidator "gowallval/validators/hbar_validator"
-	ICONValidator "gowallval/validators/icx_validator"
-	IOSTValidator "gowallval/validators/iost_validator"
-	LiskValidator "gowallval/validators/lisk_validator"
-	StellarValidator "gowallval/validators/lumen_validator"
-	NanoValidator "gowallval/validators/nano_validator"
-	NEMValidator "gowallval/validators/nem_validator"
-	RippleValidator "gowallval/validators/ripple_validator"
-	SiacoinValidator "gowallval/validators/sc_validator"
-	SteemValidator "gowallval/validators/steem_validator"
-	SyscoinValidator "gowallval/validators/sys_validator"
-	ZilliqaValidator "gowallval/validators/zil_validator"
+	AeternityValidator "github.com/seyitahmetgkc/gowallval/validators/ae_validator"
+	AlgorandValidator "github.com/seyitahmetgkc/gowallval/validators/algo_validator"
+	ArdorValidator "github.com/seyitahmetgkc/gowallval/validators/ardr_validator"
+	AtomValidator "github.com/seyitahmetgkc/gowallval/validators/atom_validator"
+	BitcoinValidator "github.com/seyitahmetgkc/gowallval/validators/bitcoin_validator"
+	BEP2Validator "github.com/seyitahmetgkc/gowallval/validators/bnb_validator"
+	//BTSValidator "github.com/seyitahmetgkc/gowallval/validators/bts_validator"
+	CardanoValidator "github.com/seyitahmetgkc/gowallval/validators/cardano_validator"
+	EOSValidator "github.com/seyitahmetgkc/gowallval/validators/eos_validator"
+	EthereumValidator "github.com/seyitahmetgkc/gowallval/validators/ethereum_validator"
+	HBARValidator "github.com/seyitahmetgkc/gowallval/validators/hbar_validator"
+	ICONValidator "github.com/seyitahmetgkc/gowallval/validators/icx_validator"
+	IOSTValidator "github.com/seyitahmetgkc/gowallval/validators/iost_validator"
+	LiskValidator "github.com/seyitahmetgkc/gowallval/validators/lisk_validator"
+	StellarValidator "github.com/seyitahmetgkc/gowallval/validators/lumen_validator"
+	NanoValidator "github.com/seyitahmetgkc/gowallval/validators/nano_validator"
+	NEMValidator "github.com/seyitahmetgkc/gowallval/validators/nem_validator"
+	RippleValidator "github.com/seyitahmetgkc/gowallval/validators/ripple_validator"
+	SiacoinValidator "github.com/seyitahmetgkc/gowallval/validators/sc_validator"
+	SteemValidator "github.com/seyitahmetgkc/gowallval/validators/steem_validator"
+	SyscoinValidator "github.com/seyitahmetgkc/gowallval/validators/sys_validator"
+	ZilliqaValidator "github.com/seyitahmetgkc/gowallval/validators/zil_validator"
 )
 
 var AE = Network{
@@ -80,11 +79,11 @@ var SEGWITBTC = Network{
 	Validator: BitcoinValidator.IsValidAddress,
 }
 
-var BTS = Network{
+/*var BTS = Network{
 	Name:      "BitShares",
 	Symbol:    "BTS",
 	Validator: BTSValidator.IsValidAddress,
-}
+}*/
 
 var ADA = Network{
 	Name:      "Cardano",
@@ -171,7 +170,7 @@ var ZIL = Network{
 }
 
 var Networks = make(map[string]Network)
-var UnsupportedNetworks = []string{"XTZ", "STX", "IOTA", "XMR", "NXS"}
+var UnsupportedNetworks = []string{"XTZ", "STX", "IOTA", "XMR", "NXS", "BTS"}
 
 func InitializeNetworks() {
 	Networks["AE"] = AE
@@ -183,7 +182,7 @@ func InitializeNetworks() {
 	Networks["BNB"] = BNB
 	Networks["ETH"] = ETH
 	Networks["SEGWITBTC"] = SEGWITBTC
-	Networks["BTS"] = BTS
+	//Networks["BTS"] = BTS
 	Networks["ADA"] = ADA
 	Networks["EOS"] = EOS
 	Networks["HBAR"] = HBAR

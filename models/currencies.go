@@ -56,11 +56,11 @@ var BitcoinETH = Currency{
 	Network: ETH,
 }
 
-var BitShares = Currency{
+/*var BitShares = Currency{
 	Symbol:  "BTS",
 	Name:    "BitShares",
 	Network: BTS,
-}
+}*/
 
 var Cardano = Currency{
 	Symbol:  "ADA",
@@ -212,7 +212,7 @@ var ZilliqaBSC = Currency{
 	Network: BSC,
 }
 
-var UnsupportedCurrencies = []string{"XTZ", "STX", "IOTA", "XMR", "NXS", "AUD"}
+var UnsupportedCurrencies = []string{"XTZ", "STX", "IOTA", "XMR", "NXS", "AUD", "BTS"}
 
 var Currencies = []Currency{
 	Aeternity,
@@ -224,7 +224,7 @@ var Currencies = []Currency{
 	BitcoinBSC,
 	BitcoinBNB,
 	BitcoinETH,
-	BitShares,
+	//BitShares,
 	Cardano,
 	CardanoBSC,
 	CardanoBNB,

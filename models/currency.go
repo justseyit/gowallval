@@ -1,14 +1,14 @@
 package models
 
 import (
-	"gowallval/customerrors"
-	//"gowallval/models/data"
+	"github.com/seyitahmetgkc/gowallval/customerrors"
+	//"github.com/seyitahmetgkc/gowallval/models/data"
 )
 
 type Currency struct {
-	Symbol    string `json:"symbol"`
-	Name      string `json:"name"`
-	Network   Network `json:"network"`
+	Symbol  string  `json:"symbol"`
+	Name    string  `json:"name"`
+	Network Network `json:"network"`
 }
 
 func GetCurrency(currSymbol string, netwSymbol string) (Currency, error) {
@@ -44,21 +44,20 @@ func GetCurrency(currSymbol string, netwSymbol string) (Currency, error) {
 			Symbol: currSymbol,
 			Name:   "Unknown",
 			Network: Network{
-				Name:      currency.Network.Name,
-				Symbol:    currency.Network.Symbol,
+				Name:   currency.Network.Name,
+				Symbol: currency.Network.Symbol,
 			},
 		}, customerrors.ErrorInvalidCurrencySymbol
-	}else if currency.Network.Symbol == "" && currency.Network.Name == "" {
+	} else if currency.Network.Symbol == "" && currency.Network.Name == "" {
 		return Currency{
 			Symbol: currSymbol,
 			Name:   currency.Name,
 			Network: Network{
-				Name:      "Unknown",
-				Symbol:    netwSymbol,
+				Name:   "Unknown",
+				Symbol: netwSymbol,
 			},
 		}, customerrors.ErrorInvalidNetworkSymbol
 	}
-
 
 	return currency, nil
 }

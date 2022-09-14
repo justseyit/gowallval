@@ -1,14 +1,19 @@
 package main
 
 import (
-	"fmt"
-	"gowallval/utils/base58"
+	"net/http"
 
-	ethereum_validator "gowallval/validators/ethereum_validator"
+	. "github.com/seyitahmetgkc/gowallval/handlers"
+	"github.com/seyitahmetgkc/gowallval/models"
+
+	"github.com/gorilla/mux"
 )
 
 func main() {
-	base58.Init()
-	m := ethereum_validator.IsValidAddress("0x4E656459ed25bF986Eea1196Bc1B00665401645d")
-	fmt.Println(m)
+	mux := mux.NewRouter().StrictSlash(true)
+	models.InitializeNetworks()
+	mux.HandleFunc("/{currencySymbol}/{networkSymbol}/{address}", AddressValidationHandler).Methods("POST")
+
+	http.ListenAndServe(":9000", mux)
+
 }
