@@ -1,7 +1,6 @@
 package ae_validator
 
 import (
-	"log"
 	"regexp"
 	"strings"
 
@@ -24,7 +23,6 @@ func verifyChecksum(address string) bool {
 func IsValidAddress(address string) bool {
 	match, _ := regexp.MatchString(RegExp, address)
 	if !match {
-		log.Println("IsValidAddress - Address is not valid")
 		return false
 	} else {
 		return verifyChecksum(address)

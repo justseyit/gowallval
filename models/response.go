@@ -1,9 +1,8 @@
 package models
 
 type Response struct {
-	Address       string `json:"address"`
-	NetworkSymbol string `json:"network_symbol"`
-	NetworkName   string `json:"network_name"`
-	Message       string `json:"message"`
-	Valid         bool   `json:"valid"`
+	Address        string   `json:"address"`
+	Currency       Currency `json:"currency"`
+	IsValidAddress bool     `json:"isValidAddress"`
+	Message        string   `json:"message"`
 }

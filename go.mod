@@ -10,6 +10,7 @@ require (
 	github.com/ethereum/go-ethereum v1.10.23
 	github.com/hailongz/golang v0.0.0-20200511034424-0e6b51b1b18b
 	github.com/iotaledger/iota.go/v2 v2.0.1
+	github.com/rubblelabs/ripple v0.0.0-20220803092824-2ad3ea2b5f06
 )
 
 require (
@@ -23,11 +24,9 @@ require (
 	github.com/iotaledger/hive.go v0.0.0-20211011085923-fd2eb0a47bf8 // indirect
 	github.com/iotaledger/iota.go v1.0.0 // indirect
 	github.com/klauspost/compress v1.15.0 // indirect
-	github.com/kr/pretty v0.2.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
-	github.com/rubblelabs/ripple v0.0.0-20220803092824-2ad3ea2b5f06 // indirect
 	golang.org/x/exp v0.0.0-20220722155223-a9213eeb770e // indirect
-	golang.org/x/net v0.0.0-20220607020251-c690dde0001d // indirect
+	golang.org/x/net v0.0.0-20220722155237-a158d28d115b // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/genproto v0.0.0-20210624195500-8bfb893ecb84 // indirect
 	google.golang.org/grpc v1.40.0 // indirect
@@ -40,7 +39,8 @@ require (
 	github.com/btcsuite/btcd v0.23.1
 	github.com/fivebinaries/go-cardano-serialization v0.0.0-20220811194245-792afc7665a3
 	github.com/fxamacker/cbor/v2 v2.4.0 // indirect
+	github.com/gorilla/mux v1.8.0
 	github.com/x448/float16 v0.8.4 // indirect
 	golang.org/x/crypto v0.0.0-20220829220503-c86fa9a7ed90
-	golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a // indirect
+	golang.org/x/sys v0.0.0-20220722155257-8c9f86f7a55f // indirect
 )

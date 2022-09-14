@@ -4,7 +4,9 @@ import (
 	"errors"
 )
 
-var InvalidNetworkSymbol error = errors.New("error: invalid network symbol")
-var InvalidWalletAddress error = errors.New("error: invalid wallet address")
+var ErrorInvalidNetworkSymbol error = errors.New("error: invalid network symbol")
+var ErrorInvalidWalletAddress error = errors.New("error: invalid wallet address")
+var ErrorInvalidCurrencySymbol error = errors.New("error: invalid currency symbol")
+var ErrorCurrencyNotSupported error = errors.New("error: currency not supported")
+var ErrorNetworkNotSupported error = errors.New("error: network not supported")
 
-const Succeeded = "succeeded"
