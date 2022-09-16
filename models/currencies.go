@@ -212,6 +212,79 @@ var ZilliqaBSC = Currency{
 	Network: BSC,
 }
 
+var ONEINCHBSC = Currency{
+	Symbol:  "1INCH",
+	Name:    "1INCH",
+	Network: BSC,
+}
+
+var ONEINCHETH = Currency{
+	Symbol:  "1INCH",
+	Name:    "1INCH",
+	Network: ETH,
+}
+
+var AAVEBSC = Currency{
+	Symbol:  "AAVE",
+	Name:    "AAVE",
+	Network: BSC,
+}
+
+var AAVEETH = Currency{
+	Symbol:  "AAVE",
+	Name:    "AAVE",
+	Network: ETH,
+}
+
+var AAVEBNB = Currency{
+	Symbol:  "AAVE",
+	Name:    "AAVE",
+	Network: BNB,
+}
+
+var AragonNETH = Currency{
+	Symbol:  "ANT",
+	Name:    "Aragon",
+	Network: ETH,
+}
+
+var AxieInfinityBSC = Currency{
+	Symbol:  "AXS",
+	Name:    "Axie Infinity",
+	Network: BSC,
+}
+
+var AxieInfinityETH = Currency{
+	Symbol:  "AXS",
+	Name:    "Axie Infinity",
+	Network: ETH,
+}
+
+var AxieInfinityRON = Currency{
+	Symbol:  "AXS",
+	Name:    "Axie Infinity",
+	Network: RON,
+}
+
+var BadgerDAOETH = Currency{
+	Symbol:  "BADGER",
+	Name:    "Badger DAO",
+	Network: ETH,
+}
+
+var BalancerETH = Currency{
+	Symbol:  "BAL",
+	Name:    "Balancer",
+	Network: ETH,
+}
+
+var BalancerBSC = Currency{
+	Symbol:  "BAL",
+	Name:    "Balancer",
+	Network: BSC,
+}
+
+
 var UnsupportedCurrencies = []string{"XTZ", "STX", "IOTA", "XMR", "NXS", "AUD", "BTS"}
 
 var Currencies = []Currency{

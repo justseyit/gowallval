@@ -12,7 +12,7 @@ import (
 func main() {
 	mux := mux.NewRouter().StrictSlash(true)
 	models.InitializeNetworks()
-	mux.HandleFunc("/{currencySymbol}/{networkSymbol}/{address}", AddressValidationHandler).Methods("POST")
+	mux.HandleFunc("/", AddressValidationHandler).Methods("POST")
 
 	http.ListenAndServe(":9000", mux)
 

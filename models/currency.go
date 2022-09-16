@@ -11,7 +11,7 @@ type Currency struct {
 	Network Network `json:"network"`
 }
 
-func GetCurrency(currSymbol string, netwSymbol string) (Currency, error) {
+func getCurrency(currSymbol string, netwSymbol string) (Currency, error) {
 
 	var currency Currency
 	for _, network := range UnsupportedNetworks {

@@ -23,11 +23,12 @@ import (
 	SteemValidator "github.com/seyitahmetgkc/gowallval/validators/steem_validator"
 	SyscoinValidator "github.com/seyitahmetgkc/gowallval/validators/sys_validator"
 	ZilliqaValidator "github.com/seyitahmetgkc/gowallval/validators/zil_validator"
+	RoninValidator "github.com/seyitahmetgkc/gowallval/validators/ronin_validator"
 )
 
 var AE = Network{
 	Name:      "Aeternity",
-	Symbol:    "æ",
+	Symbol:    "AE",
 	Validator: AeternityValidator.IsValidAddress,
 }
 
@@ -167,6 +168,12 @@ var ZIL = Network{
 	Name:      "Zilliqa",
 	Symbol:    "ZIL",
 	Validator: ZilliqaValidator.IsValidAddress,
+}
+
+var RON = Network{
+	Name:      "Ronin",
+	Symbol:    "RON",
+	Validator: RoninValidator.IsValidAddress,
 }
 
 var Networks = make(map[string]Network)
