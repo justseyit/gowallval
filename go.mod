@@ -26,6 +26,7 @@ require (
 	github.com/btcsuite/btcd/chaincfg/chainhash v1.0.1 // indirect
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1 // indirect
 	github.com/fxamacker/cbor/v2 v2.4.0 // indirect
+	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/iotaledger/hive.go v0.0.0-20211011085923-fd2eb0a47bf8 // indirect
 	github.com/iotaledger/iota.go v1.0.0 // indirect

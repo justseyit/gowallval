@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	. "github.com/seyitahmetgkc/gowallval/models"
+	. "github.com/seyitahmetgkc/gowallval/data"
 )
 
 func AddressValidationHandler(w http.ResponseWriter, r *http.Request) {
@@ -18,7 +19,12 @@ func AddressValidationHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	response, _ := GetResponse(request)
+	response, err := GetResponse(request)
+	if err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		fmt.Fprintf(w, "Error: %s", err.Error())
+		return
+	}
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
