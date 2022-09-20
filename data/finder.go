@@ -56,6 +56,15 @@ func getNetwork(netwSymbol string) (Network, error) {
 	}, ErrorInvalidNetworkSymbol
 }
 
+func checkCurrencyExistsInNetwork(currID int, netwID int) error {
+	for _, mapping := range AppCurrencyNetworkMappings {
+		if mapping.CurrencyID == currID && mapping.NetworkID == netwID {
+			return nil
+		}
+	}
+	return ErrorCurrencyNotInThisNetwork
+}
+
 func GetResponse(req Request) (Response, error) {
 	var response Response
 	curr, err := getCurrency(req.CurrencySymbol)
@@ -64,6 +73,13 @@ func GetResponse(req Request) (Response, error) {
 	}
 	netw, err := getNetwork(req.NetworkSymbol)
 	if err != nil {
+		return response, err
+	}
+	err = checkCurrencyExistsInNetwork(curr.ID, netw.ID)
+	if err != nil {
+		response.Address = req.Address
+		response.Currency = curr
+		response.Network = netw
 		return response, err
 	}
 	response.Address = req.Address

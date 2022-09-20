@@ -22,7 +22,7 @@ func AddressValidationHandler(w http.ResponseWriter, r *http.Request) {
 	response, err := GetResponse(request)
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
-		fmt.Fprintf(w, "Error: %s", err.Error())
+		response.Message = err.Error()
 		return
 	}
 

@@ -55,4 +55,6 @@ func initializeValidators() {
 	Validators["SYS"] = SyscoinValidator.IsValidAddress
 	Validators["ZIL"] = ZilliqaValidator.IsValidAddress
 	Validators["RON"] = RoninValidator.IsValidAddress
+	Validators["BCH"] = BitcoinValidator.IsValidAddress
+	Validators["MATIC"] = EthereumValidator.IsValidAddress
 }
