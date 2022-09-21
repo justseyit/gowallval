@@ -25,6 +25,8 @@ import (
 	SyscoinValidator "github.com/seyitahmetgkc/gowallval/validators/sys_validator"
 	ZilliqaValidator "github.com/seyitahmetgkc/gowallval/validators/zil_validator"
 	RoninValidator "github.com/seyitahmetgkc/gowallval/validators/ronin_validator"
+	LitecoinValidator "github.com/seyitahmetgkc/gowallval/validators/ltc_validator"
+	ZcashValidator "github.com/seyitahmetgkc/gowallval/validators/zcash_validator"
 )
 
 var Validators = make(map[string]func(string) bool)
@@ -57,4 +59,6 @@ func initializeValidators() {
 	Validators["RON"] = RoninValidator.IsValidAddress
 	Validators["BCH"] = BitcoinValidator.IsValidAddress
 	Validators["MATIC"] = EthereumValidator.IsValidAddress
+	Validators["LTC"] = LitecoinValidator.IsValidAddress
+	Validators["ZEC"] = ZcashValidator.IsValidAddress
 }
