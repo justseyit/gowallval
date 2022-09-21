@@ -8,7 +8,7 @@ import (
 	AtomValidator "github.com/seyitahmetgkc/gowallval/validators/atom_validator"
 	BitcoinValidator "github.com/seyitahmetgkc/gowallval/validators/bitcoin_validator"
 	BEP2Validator "github.com/seyitahmetgkc/gowallval/validators/bnb_validator"
-	//BTSValidator "github.com/seyitahmetgkc/gowallval/validators/bts_validator"
+	BTSValidator "github.com/seyitahmetgkc/gowallval/validators/bts_validator"
 	CardanoValidator "github.com/seyitahmetgkc/gowallval/validators/cardano_validator"
 	EOSValidator "github.com/seyitahmetgkc/gowallval/validators/eos_validator"
 	EthereumValidator "github.com/seyitahmetgkc/gowallval/validators/ethereum_validator"
@@ -27,6 +27,13 @@ import (
 	RoninValidator "github.com/seyitahmetgkc/gowallval/validators/ronin_validator"
 	LitecoinValidator "github.com/seyitahmetgkc/gowallval/validators/ltc_validator"
 	ZcashValidator "github.com/seyitahmetgkc/gowallval/validators/zcash_validator"
+	AvaxValidator "github.com/seyitahmetgkc/gowallval/validators/avax_validator"
+	DashValidator "github.com/seyitahmetgkc/gowallval/validators/dash_validator"
+	MoneroValidator "github.com/seyitahmetgkc/gowallval/validators/monero_validator"
+	SolanaValidator "github.com/seyitahmetgkc/gowallval/validators/sol_validator"
+	TronValidator "github.com/seyitahmetgkc/gowallval/validators/tron_validator"
+	TezosValidator "github.com/seyitahmetgkc/gowallval/validators/xtz_validator"
+	BandValidator "github.com/seyitahmetgkc/gowallval/validators/band_validator"
 )
 
 var Validators = make(map[string]func(string) bool)
@@ -41,7 +48,7 @@ func initializeValidators() {
 	Validators["BNB"] = BEP2Validator.IsValidAddress
 	Validators["ETH"] = EthereumValidator.IsValidAddress
 	Validators["SEGWITBTC"] = BitcoinValidator.IsValidAddress
-	//Validators["BTS"] = BTS
+	Validators["BTS"] = BTSValidator.IsValidAddress
 	Validators["ADA"] = CardanoValidator.IsValidAddress
 	Validators["EOS"] = EOSValidator.IsValidAddress
 	Validators["HBAR"] = HBARValidator.IsValidAddress
@@ -61,4 +68,11 @@ func initializeValidators() {
 	Validators["MATIC"] = EthereumValidator.IsValidAddress
 	Validators["LTC"] = LitecoinValidator.IsValidAddress
 	Validators["ZEC"] = ZcashValidator.IsValidAddress
+	Validators["AVAX"] = AvaxValidator.IsValidAddress
+	Validators["DASH"] = DashValidator.IsValidAddress
+	Validators["XMR"] = MoneroValidator.IsValidAddress
+	Validators["SOL"] = SolanaValidator.IsValidAddress
+	Validators["TRX"] = TronValidator.IsValidAddress
+	Validators["XTZ"] = TezosValidator.IsValidAddress
+	Validators["BAND"] = BandValidator.IsValidAddress
 }

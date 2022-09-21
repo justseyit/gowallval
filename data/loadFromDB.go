@@ -12,8 +12,8 @@ var AppCurrencies []Currency
 var AppNetworks []Network
 var AppCurrencyNetworkMappings []CurrencyNetworkMapping
 var appDB *sql.DB
-var UnsupportedNetworks = []string{"XTZ", "STX", "IOTA", "XMR", "NXS", "BTS, BAND, AVAXC, SOL, XTZ, TRX"}
-var UnsupportedCurrencies = []string{"XTZ", "STX", "IOTA", "XMR", "NXS", "AUD", "BTS, CQT"}
+var UnsupportedNetworks = []string{"STX", "MIOTA", "NXS"}
+var UnsupportedCurrencies = []string{"STX", "IOTA","NXS"}
 
 func LoadFromDB() {
 	appDB = openConnection()

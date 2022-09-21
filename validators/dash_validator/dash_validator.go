@@ -1,13 +1,11 @@
-//NOT COMPLETED
-
 package dash_validator
 
 import (
-	"github.com/dashpay/godash/chaincfg"
-	"github.com/dashpay/godashutil"
+	"github.com/MixinNetwork/mixin/domains/dash"
 )
 
+//const dashRegex string = "^X[1-9A-HJ-NP-Za-km-z]{33}"
+
 func IsValidAddress(address string) bool {
-	_, err := godashutil.DecodeAddress(address, &chaincfg.MainNetParams)
-	return err == nil
+	return dash.VerifyAddress(address) == nil
 }

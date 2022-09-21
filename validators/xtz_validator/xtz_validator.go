@@ -1,17 +1,16 @@
-//NOT COMPLETED
-//Gives false positives
-
 package xtz_validator
 
 import (
-	"fmt"
-
-	sha256p "github.com/btwhite/go-btw-photon/crypto/sha256"
-
-	base58 "github.com/btcsuite/btcutil/base58"
+	"github.com/MixinNetwork/mixin/domains/tezos"
+	//sha256p "github.com/btwhite/go-btw-photon/crypto/sha256"
+	//base58 "github.com/btcsuite/btcutil/base58"
 )
 
 func IsValidAddress(address string) bool {
+	return tezos.VerifyAddress(address) == nil
+}
+
+/*func IsValidAddress(address string) bool {
 	decoded := base58.Decode(address)
 	payload := decodeRaw(decoded)
 	if payload == nil {
@@ -51,7 +50,7 @@ function decodeRaw(buffer) {
         return;
     return payload;
 }
-*/
+
 
 // converts byte array to hex string
 func byteArray2hexStr(byteArray []byte) string {
@@ -79,4 +78,4 @@ func sha256x2(hexStr string) string {
 // sha256
 func sha256(hexStr string) string {
 	return fmt.Sprintf("%x", sha256p.Sha256([]byte(hexStr)))
-}
+}*/

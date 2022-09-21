@@ -7,7 +7,7 @@ import (
 	. "github.com/seyitahmetgkc/gowallval/handlers"
 
 	"github.com/gorilla/mux"*/
-	"github.com/seyitahmetgkc/gowallval/validators/dash_validator"
+	"github.com/seyitahmetgkc/gowallval/validators/band_validator"
 )
 
 func main() {
@@ -18,7 +18,7 @@ func main() {
 
 	http.ListenAndServe(":9000", mux)*/
 
-	val := dash_validator.IsValidAddress("XqKGJUbkhpAEBxXs1oNNyqjFHfWZ8YXKqi")
+	val := band_validator.IsValidAddress("band1lrakj39k2ledcahdkqqq5ugjgzhz445ntg5rll")
 	println(val)
 
 }
