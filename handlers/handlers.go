@@ -3,10 +3,11 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 
-	. "github.com/seyitahmetgkc/gowallval/models"
 	. "github.com/seyitahmetgkc/gowallval/data"
+	. "github.com/seyitahmetgkc/gowallval/models"
 )
 
 func AddressValidationHandler(w http.ResponseWriter, r *http.Request) {
@@ -32,4 +33,10 @@ func AddressValidationHandler(w http.ResponseWriter, r *http.Request) {
 	data, _ := json.Marshal(response)
 
 	w.Write([]byte(data))
+}
+
+func logServer(request Request, response Response) {
+	log.Println("Request: ", request.String())
+	log.Println("Response: ", response.String())
+	fmt.Println("----------------------------------------")
 }
