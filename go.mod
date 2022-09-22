@@ -30,6 +30,7 @@ require (
 	github.com/fxamacker/cbor/v2 v2.4.0 // indirect
 	github.com/gofrs/uuid v4.3.0+incompatible // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
+	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/iotaledger/hive.go v0.0.0-20211011085923-fd2eb0a47bf8 // indirect
 	github.com/iotaledger/iota.go v1.0.0 // indirect
 	github.com/ltcsuite/ltcd/btcec/v2 v2.1.0 // indirect
