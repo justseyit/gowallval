@@ -26,7 +26,7 @@ func LoadFromDB() {
 
 func openConnection() *sql.DB {
 	//db, err := sql.Open("mysql", "root:root.seyit122@/walletvalidator")
-	db, err := sql.Open("mysql", "root:passqwe123!/walletvalidator")
+	db, err := sql.Open("mysql", "root:passqwe123!@/walletvalidator")
 	if err != nil {
 		log.Fatal(err)
 	}
