@@ -6,7 +6,6 @@ import (
 )
 
 func IsValidAddress(address string) bool {
-	addr, err := btcutil.DecodeAddress(address, &chaincfg.MainNetParams)
-	addr.EncodeAddress()
+	_, err := btcutil.DecodeAddress(address, &chaincfg.MainNetParams)
 	return err == nil
 }
