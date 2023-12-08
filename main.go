@@ -5,17 +5,16 @@ import (
 	"net/http"
 
 	"github.com/seyitahmetgkc/gowallval/data"
-	. "github.com/seyitahmetgkc/gowallval/handlers"
+	handlers "github.com/seyitahmetgkc/gowallval/handlers"
 
 	"github.com/gorilla/mux"
 )
 
 func main() {
-	log.Println("Starting Wallet Validator...")
+	log.Println("Wallet Validator Has Started")
 	mux := mux.NewRouter().StrictSlash(true)
 	data.LoadFromDB()
-	data.LoadFromDB()
-	mux.HandleFunc("/service", AddressValidationHandler).Methods("POST")
+	mux.HandleFunc("/service", handlers.AddressValidationHandler).Methods("POST")
 	mux.HandleFunc("/", HomePageHandler).Methods("GET")
 
 	log.Println("Starting the server on port 9000")

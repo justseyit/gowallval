@@ -1,21 +1,20 @@
 package data
 
 import (
-	. "github.com/seyitahmetgkc/gowallval/customerrors"
-	. "github.com/seyitahmetgkc/gowallval/models"
+	customerrors "github.com/seyitahmetgkc/gowallval/customerrors"
+	models "github.com/seyitahmetgkc/gowallval/models"
 )
 
-
-func getCurrency(currSymbol string) (Currency, error) {
+func getCurrency(currSymbol string) (models.Currency, error) {
 
 	//if unsupported currencies list contains the currency symbol, return error
 	for _, currency := range UnsupportedCurrencies {
 		if currency == currSymbol {
-			return Currency{
-				Symbol: currSymbol,
-				Name:   "Unknown",
-			}, 
-			ErrorCurrencyNotSupported
+			return models.Currency{
+					Symbol: currSymbol,
+					Name:   "Unknown",
+				},
+				customerrors.ErrorCurrencyNotSupported
 		}
 	}
 
@@ -25,22 +24,22 @@ func getCurrency(currSymbol string) (Currency, error) {
 		}
 	}
 
-	return Currency{
+	return models.Currency{
 		Symbol: currSymbol,
 		Name:   "Unknown",
-	}, ErrorInvalidCurrencySymbol
+	}, customerrors.ErrorInvalidCurrencySymbol
 }
 
-func getNetwork(netwSymbol string) (Network, error) {
-	
+func getNetwork(netwSymbol string) (models.Network, error) {
+
 	//if unsupported networks list contains the network symbol, return error
 	for _, network := range UnsupportedNetworks {
 		if network == netwSymbol {
-			return Network{
-				Symbol: netwSymbol,
-				Name:   "Unknown",
-			}, 
-			ErrorNetworkNotSupported
+			return models.Network{
+					Symbol: netwSymbol,
+					Name:   "Unknown",
+				},
+				customerrors.ErrorNetworkNotSupported
 		}
 	}
 
@@ -50,10 +49,10 @@ func getNetwork(netwSymbol string) (Network, error) {
 		}
 	}
 
-	return Network{
+	return models.Network{
 		Symbol: netwSymbol,
 		Name:   "Unknown",
-	}, ErrorInvalidNetworkSymbol
+	}, customerrors.ErrorInvalidNetworkSymbol
 }
 
 func checkCurrencyExistsInNetwork(currID int, netwID int) error {
@@ -62,11 +61,11 @@ func checkCurrencyExistsInNetwork(currID int, netwID int) error {
 			return nil
 		}
 	}
-	return ErrorCurrencyNotInThisNetwork
+	return customerrors.ErrorCurrencyNotInThisNetwork
 }
 
-func GetResponse(req Request) (Response, error) {
-	var response Response
+func GetResponse(req models.Request) (models.Response, error) {
+	var response models.Response
 	curr, err := getCurrency(req.CurrencySymbol)
 	if err != nil {
 		return response, err

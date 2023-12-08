@@ -5,12 +5,12 @@ import (
 	"log"
 
 	_ "github.com/go-sql-driver/mysql"
-	. "github.com/seyitahmetgkc/gowallval/models"
+	models "github.com/seyitahmetgkc/gowallval/models"
 )
 
-var AppCurrencies []Currency
-var AppNetworks []Network
-var AppCurrencyNetworkMappings []CurrencyNetworkMapping
+var AppCurrencies []models.Currency
+var AppNetworks []models.Network
+var AppCurrencyNetworkMappings []models.CurrencyNetworkMapping
 var appDB *sql.DB
 var UnsupportedNetworks = []string{"STX", "MIOTA", "NXS"}
 var UnsupportedCurrencies = []string{"STX", "IOTA", "NXS"}
@@ -25,8 +25,7 @@ func LoadFromDB() {
 }
 
 func openConnection() *sql.DB {
-	//db, err := sql.Open("mysql", "root:root.seyit122@/walletvalidator")
-	db, err := sql.Open("mysql", "root:passqwe123!@/walletvalidator")
+	db, err := sql.Open("mysql", DBUser+":"+DBPass+"@/"+DBName)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -40,15 +39,15 @@ func closeConnection(db *sql.DB) {
 	}
 }
 
-func loadNetworks() []Network {
+func loadNetworks() []models.Network {
 	rows, err := appDB.Query("SELECT * FROM network")
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer rows.Close()
-	var networks []Network
+	var networks []models.Network
 	for rows.Next() {
-		var network Network
+		var network models.Network
 		err := rows.Scan(&network.ID, &network.Symbol, &network.Name)
 		if err != nil {
 			log.Fatal(err)
@@ -62,15 +61,15 @@ func loadNetworks() []Network {
 	return networks
 }
 
-func loadCurrencies() []Currency {
+func loadCurrencies() []models.Currency {
 	rows, err := appDB.Query("SELECT * FROM currency")
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer rows.Close()
-	var currencies []Currency
+	var currencies []models.Currency
 	for rows.Next() {
-		var currency Currency
+		var currency models.Currency
 		err := rows.Scan(&currency.ID, &currency.Symbol, &currency.Name)
 		if err != nil {
 			log.Fatal(err)
@@ -84,15 +83,15 @@ func loadCurrencies() []Currency {
 	return currencies
 }
 
-func loadCurrencyNetworkMappings() []CurrencyNetworkMapping {
+func loadCurrencyNetworkMappings() []models.CurrencyNetworkMapping {
 	rows, err := appDB.Query("SELECT * FROM currencynetwork")
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer rows.Close()
-	var mappings []CurrencyNetworkMapping
+	var mappings []models.CurrencyNetworkMapping
 	for rows.Next() {
-		var mapping CurrencyNetworkMapping
+		var mapping models.CurrencyNetworkMapping
 		err := rows.Scan(&mapping.CurrencyID, &mapping.NetworkID)
 		if err != nil {
 			log.Fatal(err)
