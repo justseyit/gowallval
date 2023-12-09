@@ -11,14 +11,17 @@ import (
 )
 
 func main() {
-	log.Println("Wallet Validator Has Started")
+	log.Println("Wallet Validator is being started...")
 	mux := mux.NewRouter().StrictSlash(true)
 	data.LoadFromDB()
 	mux.HandleFunc("/service", handlers.AddressValidationHandler).Methods("POST")
 	mux.HandleFunc("/", HomePageHandler).Methods("GET")
 
-	log.Println("Starting the server on port 9000")
-	http.ListenAndServe(":9000", mux)
+	log.Println("Starting the server on port 9000...")
+	err := http.ListenAndServe(":9000", mux)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
 
 func HomePageHandler(w http.ResponseWriter, r *http.Request) {
