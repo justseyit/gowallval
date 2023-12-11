@@ -1,0 +1,322 @@
+[
+  {
+    "currencyID": 1,
+    "currencySymbol": "BTC",
+    "currencyName": "Bitcoin"
+  },
+  {
+    "currencyID": 2,
+    "currencySymbol": "ALGO",
+    "currencyName": "Algorand"
+  },
+  {
+    "currencyID": 3,
+    "currencySymbol": "AE",
+    "currencyName": "Æternity"
+  },
+  {
+    "currencyID": 4,
+    "currencySymbol": "ARDR",
+    "currencyName": "Ardor"
+  },
+  {
+    "currencyID": 5,
+    "currencySymbol": "ATOM",
+    "currencyName": "Cosmos"
+  },
+  {
+    "currencyID": 6,
+    "currencySymbol": "BTS",
+    "currencyName": "BitShare"
+  },
+  {
+    "currencyID": 7,
+    "currencySymbol": "ADA",
+    "currencyName": "Cardano"
+  },
+  {
+    "currencyID": 8,
+    "currencySymbol": "EOS",
+    "currencyName": "EOS"
+  },
+  {
+    "currencyID": 9,
+    "currencySymbol": "ETH",
+    "currencyName": "Ethereum"
+  },
+  {
+    "currencyID": 10,
+    "currencySymbol": "HBAR",
+    "currencyName": "Hedera Hashgraph"
+  },
+  {
+    "currencyID": 11,
+    "currencySymbol": "ICX",
+    "currencyName": "ICON"
+  },
+  {
+    "currencyID": 12,
+    "currencySymbol": "IOST",
+    "currencyName": "IOST"
+  },
+  {
+    "currencyID": 13,
+    "currencySymbol": "LSK",
+    "currencyName": "Lisk"
+  },
+  {
+    "currencyID": 14,
+    "currencySymbol": "XLM",
+    "currencyName": "Stellar Lumens"
+  },
+  {
+    "currencyID": 15,
+    "currencySymbol": "XNO",
+    "currencyName": "Nano"
+  },
+  {
+    "currencyID": 16,
+    "currencySymbol": "XEM",
+    "currencyName": "NEM"
+  },
+  {
+    "currencyID": 17,
+    "currencySymbol": "XRP",
+    "currencyName": "Ripple"
+  },
+  {
+    "currencyID": 18,
+    "currencySymbol": "SYS",
+    "currencyName": "Syscoin"
+  },
+  {
+    "currencyID": 19,
+    "currencySymbol": "STEEM",
+    "currencyName": "Steem"
+  },
+  {
+    "currencyID": 20,
+    "currencySymbol": "ZIL",
+    "currencyName": "Zilliqa"
+  },
+  {
+    "currencyID": 21,
+    "currencySymbol": "1INCH",
+    "currencyName": "1INCH"
+  },
+  {
+    "currencyID": 22,
+    "currencySymbol": "AAVE",
+    "currencyName": "AAVE"
+  },
+  {
+    "currencyID": 23,
+    "currencySymbol": "ANT",
+    "currencyName": "Aragon"
+  },
+  {
+    "currencyID": 24,
+    "currencySymbol": "AXS",
+    "currencyName": "Axie Infinity"
+  },
+  {
+    "currencyID": 25,
+    "currencySymbol": "BADGER",
+    "currencyName": "Badger DAO"
+  },
+  {
+    "currencyID": 26,
+    "currencySymbol": "BAL",
+    "currencyName": "Balancer"
+  },
+  {
+    "currencyID": 27,
+    "currencySymbol": "SC",
+    "currencyName": "Siacoin"
+  },
+  {
+    "currencyID": 28,
+    "currencySymbol": "BAND",
+    "currencyName": "BAND"
+  },
+  {
+    "currencyID": 29,
+    "currencySymbol": "BAT",
+    "currencyName": "Basic Attention Token"
+  },
+  {
+    "currencyID": 30,
+    "currencySymbol": "BCH",
+    "currencyName": "Bitcoin Cash"
+  },
+  {
+    "currencyID": 31,
+    "currencySymbol": "BNT",
+    "currencyName": "Bancor"
+  },
+  {
+    "currencyID": 32,
+    "currencySymbol": "CHZ",
+    "currencyName": "Chiliz"
+  },
+  {
+    "currencyID": 33,
+    "currencySymbol": "COMP",
+    "currencyName": "Compound"
+  },
+  {
+    "currencyID": 34,
+    "currencySymbol": "CRV",
+    "currencyName": "Curve"
+  },
+  {
+    "currencyID": 35,
+    "currencySymbol": "DAI",
+    "currencyName": "Dai"
+  },
+  {
+    "currencyID": 36,
+    "currencySymbol": "ENJ",
+    "currencyName": "Enjin Coin"
+  },
+  {
+    "currencyID": 37,
+    "currencySymbol": "GNO",
+    "currencyName": "Gnosis"
+  },
+  {
+    "currencyID": 38,
+    "currencySymbol": "GRT",
+    "currencyName": "The Graph"
+  },
+  {
+    "currencyID": 39,
+    "currencySymbol": "KNC",
+    "currencyName": "KyberNetwork"
+  },
+  {
+    "currencyID": 40,
+    "currencySymbol": "LINK",
+    "currencyName": "ChainLink"
+  },
+  {
+    "currencyID": 41,
+    "currencySymbol": "LRC",
+    "currencyName": "Loopring"
+  },
+  {
+    "currencyID": 42,
+    "currencySymbol": "LTC",
+    "currencyName": "Litecoin"
+  },
+  {
+    "currencyID": 43,
+    "currencySymbol": "MATIC",
+    "currencyName": "Polygon"
+  },
+  {
+    "currencyID": 44,
+    "currencySymbol": "MIR",
+    "currencyName": "Mirror Protocol"
+  },
+  {
+    "currencyID": 45,
+    "currencySymbol": "MKR",
+    "currencyName": "Maker"
+  },
+  {
+    "currencyID": 46,
+    "currencySymbol": "OCEAN",
+    "currencyName": "Ocean Protocol"
+  },
+  {
+    "currencyID": 47,
+    "currencySymbol": "OGN",
+    "currencyName": "Origin Token"
+  },
+  {
+    "currencyID": 48,
+    "currencySymbol": "OMG",
+    "currencyName": "OMG Network"
+  },
+  {
+    "currencyID": 49,
+    "currencySymbol": "OXT",
+    "currencyName": "Orchid"
+  },
+  {
+    "currencyID": 50,
+    "currencySymbol": "PAXG",
+    "currencyName": "PAX Gold"
+  },
+  {
+    "currencyID": 51,
+    "currencySymbol": "REP",
+    "currencyName": "Augur v2"
+  },
+  {
+    "currencyID": 52,
+    "currencySymbol": "SAND",
+    "currencyName": "The Sandbox"
+  },
+  {
+    "currencyID": 53,
+    "currencySymbol": "SNX",
+    "currencyName": "Synthetix Network Token"
+  },
+  {
+    "currencyID": 54,
+    "currencySymbol": "STORJ",
+    "currencyName": "Storj"
+  },
+  {
+    "currencyID": 55,
+    "currencySymbol": "SUSHI",
+    "currencyName": "Sushi"
+  },
+  {
+    "currencyID": 56,
+    "currencySymbol": "UNI",
+    "currencyName": "Uniswap"
+  },
+  {
+    "currencyID": 57,
+    "currencySymbol": "USDT",
+    "currencyName": "TetherUS"
+  },
+  {
+    "currencyID": 58,
+    "currencySymbol": "YFI",
+    "currencyName": "yearn.finance"
+  },
+  {
+    "currencyID": 59,
+    "currencySymbol": "ZEC",
+    "currencyName": "Zcash"
+  },
+  {
+    "currencyID": 60,
+    "currencySymbol": "ZRX",
+    "currencyName": "0x"
+  },
+  {
+    "currencyID": 61,
+    "currencySymbol": "XMR",
+    "currencyName": "Monero"
+  },
+  {
+    "currencyID": 62,
+    "currencySymbol": "XTZ",
+    "currencyName": "Tezos"
+  },
+  {
+    "currencyID": 63,
+    "currencySymbol": "CQT",
+    "currencyName": "Covalent"
+  },
+  {
+    "currencyID": 64,
+    "currencySymbol": "KEEP",
+    "currencyName": "Keep Network"
+  }
+]

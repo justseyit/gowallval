@@ -1,0 +1,182 @@
+[
+  {
+    "networkID": 1,
+    "networkSymbol": "AE",
+    "networkName": "Æternity"
+  },
+  {
+    "networkID": 2,
+    "networkSymbol": "ALGO",
+    "networkName": "Algorand"
+  },
+  {
+    "networkID": 3,
+    "networkSymbol": "ARDR",
+    "networkName": "Ardor"
+  },
+  {
+    "networkID": 4,
+    "networkSymbol": "ATOM",
+    "networkName": "Cosmos"
+  },
+  {
+    "networkID": 5,
+    "networkSymbol": "BSC",
+    "networkName": "Binance Smart Chain (BEP20)"
+  },
+  {
+    "networkID": 6,
+    "networkSymbol": "BTC",
+    "networkName": "Bitcoin"
+  },
+  {
+    "networkID": 7,
+    "networkSymbol": "BNB",
+    "networkName": "Binance Beacon Chain (BEP2)"
+  },
+  {
+    "networkID": 8,
+    "networkSymbol": "ETH",
+    "networkName": "Ethereum (ERC20)"
+  },
+  {
+    "networkID": 9,
+    "networkSymbol": "SEGWITBTC",
+    "networkName": "Bitcoin (SegWit)"
+  },
+  {
+    "networkID": 10,
+    "networkSymbol": "BTS",
+    "networkName": "BitShares"
+  },
+  {
+    "networkID": 11,
+    "networkSymbol": "ADA",
+    "networkName": "Cardano"
+  },
+  {
+    "networkID": 12,
+    "networkSymbol": "EOS",
+    "networkName": "EOS"
+  },
+  {
+    "networkID": 13,
+    "networkSymbol": "HBAR",
+    "networkName": "Hedera Hashgraph"
+  },
+  {
+    "networkID": 14,
+    "networkSymbol": "ICX",
+    "networkName": "ICON"
+  },
+  {
+    "networkID": 15,
+    "networkSymbol": "IOST",
+    "networkName": "IOST"
+  },
+  {
+    "networkID": 16,
+    "networkSymbol": "LSK",
+    "networkName": "Lisk"
+  },
+  {
+    "networkID": 17,
+    "networkSymbol": "XLM",
+    "networkName": "Stellar Lumens"
+  },
+  {
+    "networkID": 18,
+    "networkSymbol": "NANO",
+    "networkName": "Nano"
+  },
+  {
+    "networkID": 19,
+    "networkSymbol": "XEM",
+    "networkName": "NEM"
+  },
+  {
+    "networkID": 20,
+    "networkSymbol": "XRP",
+    "networkName": "Ripple"
+  },
+  {
+    "networkID": 21,
+    "networkSymbol": "SC",
+    "networkName": "Siacoin"
+  },
+  {
+    "networkID": 22,
+    "networkSymbol": "STEEM",
+    "networkName": "Steem"
+  },
+  {
+    "networkID": 23,
+    "networkSymbol": "SYS",
+    "networkName": "Syscoin"
+  },
+  {
+    "networkID": 24,
+    "networkSymbol": "ZIL",
+    "networkName": "Zilliqa"
+  },
+  {
+    "networkID": 25,
+    "networkSymbol": "RON",
+    "networkName": "Ronin"
+  },
+  {
+    "networkID": 26,
+    "networkSymbol": "BCH",
+    "networkName": "Bitcoin Cash"
+  },
+  {
+    "networkID": 27,
+    "networkSymbol": "MATIC",
+    "networkName": "Polygon"
+  },
+  {
+    "networkID": 28,
+    "networkSymbol": "LTC",
+    "networkName": "Litecoin"
+  },
+  {
+    "networkID": 29,
+    "networkSymbol": "ZEC",
+    "networkName": "Zcash"
+  },
+  {
+    "networkID": 30,
+    "networkSymbol": "AVAXC",
+    "networkName": "AVAX C-Chain"
+  },
+  {
+    "networkID": 31,
+    "networkSymbol": "SOL",
+    "networkName": "Solana"
+  },
+  {
+    "networkID": 32,
+    "networkSymbol": "XTZ",
+    "networkName": "Tezos"
+  },
+  {
+    "networkID": 33,
+    "networkSymbol": "TRX",
+    "networkName": "Tron (TRC20)"
+  },
+  {
+    "networkID": 34,
+    "networkSymbol": "DASH",
+    "networkName": "Dash"
+  },
+  {
+    "networkID": 35,
+    "networkSymbol": "XMR",
+    "networkName": "Monero"
+  },
+  {
+    "networkID": 36,
+    "networkSymbol": "BAND",
+    "networkName": "BAND"
+  }
+]

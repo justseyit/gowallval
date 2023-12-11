@@ -2,9 +2,14 @@ package data
 
 import (
 	"database/sql"
+	"encoding/json"
+	"io"
+	"os"
+
 	"log"
 
 	_ "github.com/go-sql-driver/mysql"
+	configuration "github.com/seyitahmetgkc/gowallval/config"
 	models "github.com/seyitahmetgkc/gowallval/models"
 )
 
@@ -15,7 +20,72 @@ var appDB *sql.DB
 var UnsupportedNetworks = []string{"STX", "MIOTA", "NXS"}
 var UnsupportedCurrencies = []string{"STX", "IOTA", "NXS"}
 
-func LoadFromDB() {
+func LoadData() {
+	if configuration.Source == configuration.SourceDatabase {
+		loadFromDB()
+	} else {
+		loadFromJSON()
+	}
+}
+
+func loadFromJSON() {
+	AppNetworks = loadNetworksFromJSON()
+	AppCurrencies = loadCurrenciesFromJSON()
+	AppCurrencyNetworkMappings = loadCurrencyNetworkMappingsFromJSON()
+}
+
+func loadNetworksFromJSON() []models.Network {
+	var networks []models.Network
+	file, err := os.Open("./json/networks.json")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fileBytes, err := io.ReadAll(file)
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = json.Unmarshal([]byte(fileBytes), &networks)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return networks
+}
+
+func loadCurrenciesFromJSON() []models.Currency {
+	var currencies []models.Currency
+	file, err := os.Open("./json/currencies.json")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fileBytes, err := io.ReadAll(file)
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = json.Unmarshal([]byte(fileBytes), &currencies)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return currencies
+}
+
+func loadCurrencyNetworkMappingsFromJSON() []models.CurrencyNetworkMapping {
+	var mappings []models.CurrencyNetworkMapping
+	file, err := os.Open("./json/currencynetwork.json")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fileBytes, err := io.ReadAll(file)
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = json.Unmarshal([]byte(fileBytes), &mappings)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return mappings
+}
+
+func loadFromDB() {
 	appDB = openConnection()
 	defer closeConnection(appDB)
 	initializeValidators()
@@ -25,7 +95,7 @@ func LoadFromDB() {
 }
 
 func openConnection() *sql.DB {
-	db, err := sql.Open("mysql", DBUser+":"+DBPass+"@/"+DBName)
+	db, err := sql.Open("mysql", configuration.DBUser+":"+configuration.DBPass+"@/"+configuration.DBName)
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -1,0 +1,526 @@
+[
+  {
+    "currencyID": 3,
+    "networkID": 1
+  },
+  {
+    "currencyID": 2,
+    "networkID": 2
+  },
+  {
+    "currencyID": 4,
+    "networkID": 3
+  },
+  {
+    "currencyID": 5,
+    "networkID": 4
+  },
+  {
+    "currencyID": 1,
+    "networkID": 5
+  },
+  {
+    "currencyID": 7,
+    "networkID": 5
+  },
+  {
+    "currencyID": 8,
+    "networkID": 5
+  },
+  {
+    "currencyID": 9,
+    "networkID": 5
+  },
+  {
+    "currencyID": 14,
+    "networkID": 5
+  },
+  {
+    "currencyID": 17,
+    "networkID": 5
+  },
+  {
+    "currencyID": 20,
+    "networkID": 5
+  },
+  {
+    "currencyID": 21,
+    "networkID": 5
+  },
+  {
+    "currencyID": 22,
+    "networkID": 5
+  },
+  {
+    "currencyID": 24,
+    "networkID": 5
+  },
+  {
+    "currencyID": 26,
+    "networkID": 5
+  },
+  {
+    "currencyID": 28,
+    "networkID": 5
+  },
+  {
+    "currencyID": 29,
+    "networkID": 5
+  },
+  {
+    "currencyID": 30,
+    "networkID": 5
+  },
+  {
+    "currencyID": 31,
+    "networkID": 5
+  },
+  {
+    "currencyID": 33,
+    "networkID": 5
+  },
+  {
+    "currencyID": 35,
+    "networkID": 5
+  },
+  {
+    "currencyID": 39,
+    "networkID": 5
+  },
+  {
+    "currencyID": 40,
+    "networkID": 5
+  },
+  {
+    "currencyID": 41,
+    "networkID": 5
+  },
+  {
+    "currencyID": 42,
+    "networkID": 5
+  },
+  {
+    "currencyID": 43,
+    "networkID": 5
+  },
+  {
+    "currencyID": 44,
+    "networkID": 5
+  },
+  {
+    "currencyID": 45,
+    "networkID": 5
+  },
+  {
+    "currencyID": 46,
+    "networkID": 5
+  },
+  {
+    "currencyID": 47,
+    "networkID": 5
+  },
+  {
+    "currencyID": 52,
+    "networkID": 5
+  },
+  {
+    "currencyID": 53,
+    "networkID": 5
+  },
+  {
+    "currencyID": 55,
+    "networkID": 5
+  },
+  {
+    "currencyID": 56,
+    "networkID": 5
+  },
+  {
+    "currencyID": 57,
+    "networkID": 5
+  },
+  {
+    "currencyID": 58,
+    "networkID": 5
+  },
+  {
+    "currencyID": 59,
+    "networkID": 5
+  },
+  {
+    "currencyID": 62,
+    "networkID": 5
+  },
+  {
+    "currencyID": 1,
+    "networkID": 6
+  },
+  {
+    "currencyID": 1,
+    "networkID": 7
+  },
+  {
+    "currencyID": 7,
+    "networkID": 7
+  },
+  {
+    "currencyID": 8,
+    "networkID": 7
+  },
+  {
+    "currencyID": 9,
+    "networkID": 7
+  },
+  {
+    "currencyID": 17,
+    "networkID": 7
+  },
+  {
+    "currencyID": 22,
+    "networkID": 7
+  },
+  {
+    "currencyID": 28,
+    "networkID": 7
+  },
+  {
+    "currencyID": 29,
+    "networkID": 7
+  },
+  {
+    "currencyID": 30,
+    "networkID": 7
+  },
+  {
+    "currencyID": 32,
+    "networkID": 7
+  },
+  {
+    "currencyID": 33,
+    "networkID": 7
+  },
+  {
+    "currencyID": 35,
+    "networkID": 7
+  },
+  {
+    "currencyID": 40,
+    "networkID": 7
+  },
+  {
+    "currencyID": 42,
+    "networkID": 7
+  },
+  {
+    "currencyID": 45,
+    "networkID": 7
+  },
+  {
+    "currencyID": 53,
+    "networkID": 7
+  },
+  {
+    "currencyID": 55,
+    "networkID": 7
+  },
+  {
+    "currencyID": 56,
+    "networkID": 7
+  },
+  {
+    "currencyID": 57,
+    "networkID": 7
+  },
+  {
+    "currencyID": 58,
+    "networkID": 7
+  },
+  {
+    "currencyID": 59,
+    "networkID": 7
+  },
+  {
+    "currencyID": 62,
+    "networkID": 7
+  },
+  {
+    "currencyID": 1,
+    "networkID": 8
+  },
+  {
+    "currencyID": 9,
+    "networkID": 8
+  },
+  {
+    "currencyID": 17,
+    "networkID": 8
+  },
+  {
+    "currencyID": 21,
+    "networkID": 8
+  },
+  {
+    "currencyID": 22,
+    "networkID": 8
+  },
+  {
+    "currencyID": 23,
+    "networkID": 8
+  },
+  {
+    "currencyID": 24,
+    "networkID": 8
+  },
+  {
+    "currencyID": 25,
+    "networkID": 8
+  },
+  {
+    "currencyID": 26,
+    "networkID": 8
+  },
+  {
+    "currencyID": 28,
+    "networkID": 8
+  },
+  {
+    "currencyID": 29,
+    "networkID": 8
+  },
+  {
+    "currencyID": 30,
+    "networkID": 8
+  },
+  {
+    "currencyID": 31,
+    "networkID": 8
+  },
+  {
+    "currencyID": 32,
+    "networkID": 8
+  },
+  {
+    "currencyID": 33,
+    "networkID": 8
+  },
+  {
+    "currencyID": 34,
+    "networkID": 8
+  },
+  {
+    "currencyID": 35,
+    "networkID": 8
+  },
+  {
+    "currencyID": 36,
+    "networkID": 8
+  },
+  {
+    "currencyID": 37,
+    "networkID": 8
+  },
+  {
+    "currencyID": 38,
+    "networkID": 8
+  },
+  {
+    "currencyID": 39,
+    "networkID": 8
+  },
+  {
+    "currencyID": 40,
+    "networkID": 8
+  },
+  {
+    "currencyID": 41,
+    "networkID": 8
+  },
+  {
+    "currencyID": 43,
+    "networkID": 8
+  },
+  {
+    "currencyID": 44,
+    "networkID": 8
+  },
+  {
+    "currencyID": 45,
+    "networkID": 8
+  },
+  {
+    "currencyID": 46,
+    "networkID": 8
+  },
+  {
+    "currencyID": 47,
+    "networkID": 8
+  },
+  {
+    "currencyID": 48,
+    "networkID": 8
+  },
+  {
+    "currencyID": 49,
+    "networkID": 8
+  },
+  {
+    "currencyID": 50,
+    "networkID": 8
+  },
+  {
+    "currencyID": 51,
+    "networkID": 8
+  },
+  {
+    "currencyID": 52,
+    "networkID": 8
+  },
+  {
+    "currencyID": 53,
+    "networkID": 8
+  },
+  {
+    "currencyID": 54,
+    "networkID": 8
+  },
+  {
+    "currencyID": 55,
+    "networkID": 8
+  },
+  {
+    "currencyID": 56,
+    "networkID": 8
+  },
+  {
+    "currencyID": 57,
+    "networkID": 8
+  },
+  {
+    "currencyID": 58,
+    "networkID": 8
+  },
+  {
+    "currencyID": 60,
+    "networkID": 8
+  },
+  {
+    "currencyID": 63,
+    "networkID": 8
+  },
+  {
+    "currencyID": 64,
+    "networkID": 8
+  },
+  {
+    "currencyID": 1,
+    "networkID": 9
+  },
+  {
+    "currencyID": 6,
+    "networkID": 10
+  },
+  {
+    "currencyID": 7,
+    "networkID": 11
+  },
+  {
+    "currencyID": 8,
+    "networkID": 12
+  },
+  {
+    "currencyID": 10,
+    "networkID": 13
+  },
+  {
+    "currencyID": 11,
+    "networkID": 14
+  },
+  {
+    "currencyID": 12,
+    "networkID": 15
+  },
+  {
+    "currencyID": 13,
+    "networkID": 16
+  },
+  {
+    "currencyID": 14,
+    "networkID": 17
+  },
+  {
+    "currencyID": 15,
+    "networkID": 18
+  },
+  {
+    "currencyID": 16,
+    "networkID": 19
+  },
+  {
+    "currencyID": 17,
+    "networkID": 20
+  },
+  {
+    "currencyID": 19,
+    "networkID": 22
+  },
+  {
+    "currencyID": 18,
+    "networkID": 23
+  },
+  {
+    "currencyID": 20,
+    "networkID": 24
+  },
+  {
+    "currencyID": 24,
+    "networkID": 25
+  },
+  {
+    "currencyID": 30,
+    "networkID": 26
+  },
+  {
+    "currencyID": 43,
+    "networkID": 27
+  },
+  {
+    "currencyID": 52,
+    "networkID": 27
+  },
+  {
+    "currencyID": 57,
+    "networkID": 27
+  },
+  {
+    "currencyID": 42,
+    "networkID": 28
+  },
+  {
+    "currencyID": 59,
+    "networkID": 29
+  },
+  {
+    "currencyID": 57,
+    "networkID": 30
+  },
+  {
+    "currencyID": 57,
+    "networkID": 31
+  },
+  {
+    "currencyID": 57,
+    "networkID": 32
+  },
+  {
+    "currencyID": 62,
+    "networkID": 32
+  },
+  {
+    "currencyID": 61,
+    "networkID": 35
+  },
+  {
+    "currencyID": 28,
+    "networkID": 36
+  }
+]

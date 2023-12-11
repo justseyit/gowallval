@@ -13,7 +13,7 @@ import (
 func main() {
 	log.Println("Wallet Validator is being started...")
 	mux := mux.NewRouter().StrictSlash(true)
-	data.LoadFromDB()
+	data.LoadData()
 	mux.HandleFunc("/service", handlers.AddressValidationHandler).Methods("POST")
 	mux.HandleFunc("/", HomePageHandler).Methods("GET")
 
